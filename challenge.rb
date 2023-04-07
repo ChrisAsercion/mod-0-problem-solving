@@ -109,3 +109,16 @@ statement = "the one piece is real"
     p statement.gsub(/\b\w/, &:capitalize)
 
 #stack overflow to get this solution:https://codereview.stackexchange.com/questions/243409/ruby-function-to-capitalize-all-words-in-a-string
+# This problem is using Ruby Regular Expressions (also known as regex) as a way of finding specific patterns in the string.
+# gsub will return all occurences of a pattern in a string with a designated alteration 
+# \b matches a word boundary
+# \w matches a word character
+# &:capitalize is a map method that works on arrays. By splitting every word using /b and /w, the string becomes an array of strings.
+# &:capitalize ushers over the array to capitalize the first letter of each string. 
+# The logic of this method would be: an instance creation of a string. 
+# That string is printed but gsub substitutes characters
+# The designated characters to be substituted are between word boundaries and word characters
+# This will allow the method to substitute all words in the string.
+# gsub will then capitalize the first letter of all words in the string.
+
+
